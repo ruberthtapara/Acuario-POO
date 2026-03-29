@@ -1,4 +1,12 @@
 package Acuario
+import acuario.PezPayaso
+import acuario.Tiburon
+fun crearPeces() {
+    val miTiburon = Tiburon()
+    val miPezPayaso = PezPayaso()
+    println("El tiburón es de color: ${miTiburon.color}")
+    println("El pez payaso es de color: ${miPezPayaso.color}")
+}
 fun construirAcuario() {
     val acuario2 = Acuario(ancho = 25)
     acuario2.imprimirTamano()
@@ -26,9 +34,10 @@ fun construirAcuario() {
     val miTorre = TanqueTorre(diametro = 25, alto = 40)
     miTorre.imprimirTamano()
 
+    println(" Color de los Peces ")
+    crearPeces()
 }
 
-// 3. El punto de entrada del programa
 fun main() {
     construirAcuario()
 }
